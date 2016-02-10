@@ -1,17 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.yogi.tp.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-    <TextView
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/objekti_nimetus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Objekti nimetus"
+        android:textColor="#f39c12">
+
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:id="@+id/tee_nimetus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/objekti_nimetus"
+        android:layout_alignRight="@+id/objekti_nimetus"
+        android:layout_below="@+id/objekti_nimetus"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
+        android:ems="10"
+        android:hint="Tee nimetus"
+
+        android:textColor="#f39c12"/>
+
+    <EditText
+        android:id="@+id/tee_nr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tee_nimetus"
+        android:layout_alignRight="@+id/tee_nimetus"
+        android:layout_below="@+id/tee_nimetus"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
+        android:ems="10"
+        android:hint="Tee number"
+        android:inputType="numberSigned"
+        android:textColor="#f39c12"/>
+
+    <EditText
+        android:id="@+id/algus_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tee_nr"
+        android:layout_alignRight="@+id/tee_nr"
+        android:layout_below="@+id/tee_nr"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
+        android:ems="10"
+        android:hint="Algus km"
+        android:inputType="numberSigned"
+        android:textColor="#f39c12"/>
+
+    <EditText
+        android:id="@+id/lopp_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/algus_km"
+        android:layout_alignRight="@+id/algus_km"
+        android:layout_below="@+id/algus_km"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
+        android:ems="10"
+        android:hint="Lõpp km"
+        android:inputType="numberSigned"
+        android:textColor="#f39c12"/>
+
+    <Button
+        android:id="@+id/nupp_salvesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lopp_km"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
+        android:onClick="save"
+        android:text="Salvesta"
+        android:textColor="#FFF"/>
+
+    <Button
+        android:id="@+id/show_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nupp_salvesta"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
+        android:onClick="showAll"
+        android:text="Näita kõiki"
+        android:textColor="#FFF"/>
+
 </RelativeLayout>
