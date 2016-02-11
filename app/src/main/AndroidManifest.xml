@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".ObjektideNimekiriActivity">
         </activity>
+        <activity android:name=".YksObjektNimekirjasActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -25,5 +25,9 @@ public class EsilehtActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //// TODO: 11.02.2016
+    // päring selleks, et objektide nimekirja kuvada, tuleb teha vist siin
+    // seejärel saab tulemused saata järgmisse activity-sse, kus need kuvatakse
+
 
 }
