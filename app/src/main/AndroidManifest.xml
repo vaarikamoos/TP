@@ -3,7 +3,7 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name="TP"
+        android:name=".TP"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,19 +13,23 @@
         <!-- Notice this tag which provides the database name -->
         <meta-data
             android:name="AA_DB_NAME"
-            android:value="teeproovidebaas.db" />
+            android:value="teeproovidebaas.db"/>
 
         <!-- Notice this tag which provides the database version -->
         <meta-data
             android:name="AA_DB_VERSION"
-            android:value="1" />
+            android:value="1"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".UusObjektActivity">
+        </activity>
+        <activity android:name=".EsilehtActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ObjektideNimekiriActivity">
         </activity>
     </application>
 

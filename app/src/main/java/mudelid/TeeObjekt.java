@@ -41,5 +41,6 @@ public class TeeObjekt extends Model {
         this.teeNr = teeNr;
         this.algusKm = algusKm;
         this.loppKm = loppKm;
+
     }
 }

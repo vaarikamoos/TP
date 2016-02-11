@@ -1,7 +1,6 @@
 package com.yogi.tp;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +12,7 @@ import android.widget.Toast;
 import com.activeandroid.query.Select;
 import mudelid.TeeObjekt;
 
-public class MainActivity extends AppCompatActivity {
+public class UusObjektActivity extends AppCompatActivity {
     EditText EtxtObjNimetus;
     EditText EtxtTeeNimetus;
     EditText EtxtTeeNr;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_uus_objekt);
 
         EtxtObjNimetus = (EditText) findViewById(R.id.objekti_nimetus);
         EtxtTeeNimetus = (EditText) findViewById(R.id.tee_nimetus);
