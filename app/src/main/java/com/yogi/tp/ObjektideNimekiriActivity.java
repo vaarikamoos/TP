@@ -49,7 +49,7 @@ public class ObjektideNimekiriActivity extends AppCompatActivity {
     }
 
     private void initListWithData() {
-        ArrayList<TeeObjekt> teeObjekt = new Select()
+        List<TeeObjekt> teeObjekt = new Select()
                 .all()
                 .from(TeeObjekt.class)
                 .execute();
@@ -57,7 +57,7 @@ public class ObjektideNimekiriActivity extends AppCompatActivity {
         mAdapter.setData(teeObjekt);
         mListAll.setAdapter(mAdapter);
         mListAll.setEmptyView(mTextEmptyList);
-        mListAll.setOnItemClickListener(this);
+//        mListAll.setOnItemClickListener(this);
 
     }
 

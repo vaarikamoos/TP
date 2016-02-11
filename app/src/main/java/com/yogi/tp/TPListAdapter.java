@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import mudelid.TeeObjekt;
 
@@ -18,7 +19,7 @@ public class TPListAdapter extends BaseAdapter {
 
     //// TODO: 11.02.2016
     // võimalik, et siin peaks hoopis teeProov objekti asemel olema
-    private ArrayList<TeeObjekt> mData;
+    private List<TeeObjekt> mData;
     private LayoutInflater mInflater;
 
     public TPListAdapter(Context context) {
@@ -26,11 +27,11 @@ public class TPListAdapter extends BaseAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public ArrayList<TeeObjekt> getData() {
+    public List<TeeObjekt> getData() {
         return mData;
     }
 
-    public void setData(ArrayList<TeeObjekt> Data) {
+    public void setData(List<TeeObjekt> Data) {
         this.mData = Data;
         if (Data != null) {
             notifyDataSetChanged();
