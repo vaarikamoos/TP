@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import mudelid.TeeObjekt;
@@ -15,72 +16,63 @@ import mudelid.TeeObjekt;
 /**
  * Created by yogi on 11.02.2016.
  */
-public class TPListAdapter extends BaseAdapter {
+public class TeeObjektListAdapter extends BaseAdapter {
 
-    //// TODO: 11.02.2016
-    // võimalik, et siin peaks hoopis teeProov objekti asemel olema
-    private List<TeeObjekt> mData;
+    private List<TeeObjekt> objektiList;
     private LayoutInflater mInflater;
 
-    public TPListAdapter(Context context) {
+    public TeeObjektListAdapter(Context context) {
         mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public List<TeeObjekt> getData() {
-        return mData;
+    public List<TeeObjekt> getObjektiList() {
+        return objektiList;
     }
 
-    public void setData(List<TeeObjekt> Data) {
-        this.mData = Data;
-        if (Data != null) {
+    public void setObjektiList(List<TeeObjekt> ObjektiList) {
+        this.objektiList = ObjektiList;
+        if (ObjektiList != null) {
             notifyDataSetChanged();
         }
     }
 
     @Override
     public int getCount() {
-        // TODO Auto-generated method stub
-        if (mData != null && !mData.isEmpty()) {
-            return mData.size();
+        if (objektiList != null && !objektiList.isEmpty()) {
+            return objektiList.size();
         }
         return 0;
     }
 
     @Override
     public TeeObjekt getItem(int position) {
-        // TODO Auto-generated method stub
-        if (mData != null && !mData.isEmpty()) {
-            return mData.get(position);
+        if (objektiList != null && !objektiList.isEmpty()) {
+            return objektiList.get(position);
         }
         return null;
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return position;
     }
 
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         View row = convertView;
         ViewHolder holder = null;
-        if (row == null)
-        {
+        if (row == null) {
             row = mInflater
                     .inflate(R.layout.activity_yks_objekt_nimekirjas, parent, false);
             holder = new ViewHolder(row);
             row.setTag(holder);
-        }
-        else
-        {
+        } else {
             holder = (ViewHolder) row.getTag();
         }
-        if (mData != null && !mData.isEmpty()) {
-            TeeObjekt currentTeeObjekt = mData.get(position);
+        if (objektiList != null && !objektiList.isEmpty()) {
+            TeeObjekt currentTeeObjekt = objektiList.get(position);
             initValues(holder, currentTeeObjekt);
         }
 
@@ -104,14 +96,17 @@ public class TPListAdapter extends BaseAdapter {
         TextView objektiNimetus;
         TextView teeNimetus;
 
+        //teeProov, vale koht vist
+        //TextView objektisProoviAndmed;
+
 
         public ViewHolder(View view) {
-            // TODO Auto-generated constructor stub
             objektiNimetus = (TextView) view
                     .findViewById(R.id.text_value_objNimetus);
 
             teeNimetus = (TextView) view
                     .findViewById(R.id.text_value_teeNimetus);
+
 
 
         }

@@ -33,6 +33,10 @@
         </activity>
         <activity android:name=".YksObjektNimekirjasActivity">
         </activity>
+        <activity android:name=".YksProovNimekirjasActivity">
+        </activity>
+        <activity android:name=".ProovideNimekiriActivity">
+        </activity>
     </application>
 
 </manifest>

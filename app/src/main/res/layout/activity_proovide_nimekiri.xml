@@ -8,7 +8,7 @@
     >
 
     <ListView
-        android:id="@+id/list_all"
+        android:id="@+id/list_all_proov"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -20,12 +20,12 @@
     </ListView>
 
     <TextView
-        android:id="@+id/list_empty_message"
+        android:id="@+id/list_empty_message_proov"
         style="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Hetkel pole objekte">
+        android:text="Hetkel pole proove">
     </TextView>
 
 </RelativeLayout>

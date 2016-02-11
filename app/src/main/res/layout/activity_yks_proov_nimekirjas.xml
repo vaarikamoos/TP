@@ -9,7 +9,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/text_objNimetus"
+            android:id="@+id/text_proovisObjektiNimetus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
@@ -18,7 +18,28 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/text_value_objNimetus"
+            android:id="@+id/text_value_proovisObjektiNimetus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="obj "/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_proovivotukoht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="8dp"
+            android:text="Proovivõtu koht: "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_value_proovivotukoht"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
@@ -30,50 +51,24 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/text_teeNimetus"
+            android:id="@+id/text_materjaliNimetus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:padding="8dp"
-            android:text="Tee nimetus: "
+            android:text="Materjali nimetus: "
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/text_value_teeNimetus"
+            android:id="@+id/text_value_materjaliNimetus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="25 "/>
+            android:text="Kruus"/>
 
 
     </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/text_proovideArv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:padding="8dp"
-            android:text="Objektil on --- proovi"
-            android:textStyle="bold"/>
-
-        <Button
-            android:id="@+id/buttonVaataProove"
-            style="@style/Base.TextAppearance.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_column="1"
-            android:text="Vaata proove"
-            android:background="#00ffffff"
-            android:clickable="false"
-            android:layout_gravity="bottom"/>
-
-
-    </TableRow>
 
 
 </TableLayout>
